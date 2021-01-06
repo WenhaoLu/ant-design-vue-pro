@@ -1,6 +1,7 @@
 <template>
-  <div>
-    <p>{{ title }}</p>
+  <!-- 内联样式  -->
+  <div :style="{'display': 'flex', 'flex-direction': 'column'}">
+    <div class="class-title">{{ title }}</div>
     <p>Original message: "{{ message }}"</p>
     <p>Computed reversed message: "{{ reversedMessage }}"</p>
     <p>Reversed message: "{{ reversedMessageMethod() }}"</p>
@@ -71,3 +72,7 @@ export default {
   }
 }
 </script>
+
+<style lang="less" scoped>
+  @import "./Class.less";
+</style>
